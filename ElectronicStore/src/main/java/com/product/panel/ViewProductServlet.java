@@ -35,11 +35,11 @@ public class ViewProductServlet  extends HttpServlet
 				req.setAttribute("msg", msg);
 			}
 		
-			res.sendRedirect("https://www.google.com");
-//			ViewProductDAO obj=new ViewProductDAO();
-//			ArrayList<ProductBean> al=obj.retrieveData();
-//			session.setAttribute("productlist",al );
-//			req.getRequestDispatcher("ViewProduct.jsp").forward(req, res);
+			//res.sendRedirect("https://www.google.com");
+			ViewProductDAO obj=new ViewProductDAO();
+			ArrayList<ProductBean> al=obj.retrieveData();
+			session.setAttribute("productlist",al );
+			req.getRequestDispatcher("ViewProduct.jsp").forward(req, res);
 		}
 	
 	}
