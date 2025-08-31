@@ -45,21 +45,21 @@ public class AddProductServlet  extends HttpServlet
 					req.setAttribute("msg","Product Details Added Successfully");
 					req.getRequestDispatcher("AddProduct.jsp").forward(req, res);
 				}
-//				else 
-//				{
-//					req.setAttribute("msg","Product Details addition failed");
-//					req.getRequestDispatcher("AddProduct.jsp").forward(req, res);	
-//				}
-//					
+				else 
+				{
+					req.setAttribute("msg","Product Details addition failed");
+					req.getRequestDispatcher("AddProduct.jsp").forward(req, res);	
+				}
+					
 			}
 
 			
 		}catch(Exception e)
 		{
 
-		req.setAttribute("msg","Duplicate Product ids are not allowed");
-		req.getRequestDispatcher("Error.jsp").forward(req, res);	
-	
+//		req.setAttribute("msg","Duplicate Product ids are not allowed");
+//		req.getRequestDispatcher("Error.jsp").forward(req, res);	
+//	
 		}
 	}
 }
